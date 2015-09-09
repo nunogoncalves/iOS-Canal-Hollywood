@@ -26,8 +26,13 @@
                                 </constraints>
                             </webView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Yjq-GA-tUw">
-                                <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                                <rect key="frame" x="0.0" y="-2" width="320" height="482"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="TAu-MC-qf7">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
                             </tableView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vcJ-rO-ZUQ">
                                 <rect key="frame" x="0.0" y="480" width="320" height="200"/>
@@ -51,7 +56,7 @@
                             <constraint firstItem="vcJ-rO-ZUQ" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="-64" id="0ef-8L-dgg"/>
                             <constraint firstAttribute="trailing" secondItem="vcJ-rO-ZUQ" secondAttribute="trailing" id="2DH-uk-tqh"/>
                             <constraint firstItem="Yjq-GA-tUw" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="30D-mm-1tX"/>
-                            <constraint firstItem="Yjq-GA-tUw" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="8kl-ej-Tzr"/>
+                            <constraint firstItem="Yjq-GA-tUw" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="-66" id="8kl-ej-Tzr"/>
                             <constraint firstAttribute="centerY" secondItem="pLx-A8-Pug" secondAttribute="centerY" id="Gsy-r3-6YJ"/>
                             <constraint firstAttribute="centerX" secondItem="vcJ-rO-ZUQ" secondAttribute="centerX" id="HOX-AG-DWK"/>
                             <constraint firstAttribute="trailing" secondItem="Yjq-GA-tUw" secondAttribute="trailing" id="MP7-ct-t3u"/>
