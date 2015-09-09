@@ -1,0 +1,123 @@
+//
+//  ViewController.swift
+//  Canal Hollywood
+//
+//  Created by Nuno Gonçalves on 06/09/15.
+//  Copyright (c) 2015 Nuno Gonçalves. All rights reserved.
+//
+
+import UIKit
+
+class ScheduleController: UIViewController, UITableViewDelegate, DateDelegate {
+
+    
+    @IBOutlet weak var datePickerController: UIView!
+    @IBOutlet weak var datePickerBottomConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var gifWebView: UIWebView!
+    @IBOutlet weak var scheduleTable: UITableView! {
+        didSet { configureScheduleTable() }
+    }
+    
+    var dataSource: ScheduleDataSource!
+    
+    let datePickerAnimationDuration: NSTimeInterval = 0.5
+    
+    var selectedDate = NSDate()
+    var selectedMovie: ScheduledMovie?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let button = UIButton.buttonWithType(.Custom) as! UIButton
+        button.setImage(UIImage(named: "calendar.png"), forState: .Normal)
+        button.addTarget(self, action: "selectDay", forControlEvents: .TouchUpInside)
+        button.frame = CGRectMake(0, 0, 30, 30)
+        let barButtom = UIBarButtonItem(customView: button)
+        navigationItem.rightBarButtonItem = barButtom
+        
+        let filePath = NSBundle.mainBundle().pathForResource("waiting", ofType: "gif")!
+        let gif = NSData(contentsOfFile: filePath)
+        gifWebView.loadData(gif, MIMEType: "image/gif", textEncodingName: nil, baseURL: nil)
+        gifWebView.contentMode = UIViewContentMode.Center
+        gifWebView.scalesPageToFit = true
+        gifWebView.contentMode = UIViewContentMode.Center
+    
+        scheduleTable.hidden = true
+        gifWebView.hidden = false
+        
+        dataSource.load(NSDate()) {
+            self.scheduleTable.hidden = false
+            self.gifWebView.hidden = true
+        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == Constants.segues.datePickerSegue {
+            (segue.destinationViewController as! DayPickerController).dateDelegator = self
+        }
+        
+        if segue.identifier == Constants.segues.movieDetailsSegue {
+            (segue.destinationViewController as! MovieDetailsController).movie = selectedMovie!
+        }
+    }
+    
+    func canceledDateSelection() {
+        datePickerBottomConstraint.constant = -200
+        datePickerController.superview?.setNeedsDisplay()
+        
+        UIView.animateWithDuration(datePickerAnimationDuration) {
+            self.datePickerController.superview?.layoutIfNeeded()
+        }
+        
+    }
+    
+    func gotDate(date: NSDate) {
+        datePickerBottomConstraint.constant = -200
+        datePickerController.superview?.setNeedsDisplay()
+        
+        UIView.animateWithDuration(datePickerAnimationDuration) {
+            self.datePickerController.superview?.layoutIfNeeded()
+        }
+
+        if date != selectedDate {
+            selectedDate = date
+            navigationItem.title = date.stringFromDateInFormat(format: "EEE, dd 'de' MMM 'de' YYYY")
+            scheduleTable.hidden = true
+            gifWebView.hidden = false
+            dataSource.load(date) {
+                self.scheduleTable.hidden = false
+                self.gifWebView.hidden = true
+            }
+        }
+    }
+    
+    func selectDay() {
+        datePickerBottomConstraint.constant = 0
+        datePickerController.superview?.setNeedsDisplay()
+        
+        UIView.animateWithDuration(datePickerAnimationDuration) {
+            self.datePickerController.superview?.layoutIfNeeded()
+        }
+    }
+    
+    private func configureScheduleTable() {
+        scheduleTable.superview?.backgroundColor = UIColor(patternImage: UIImage(named: "hollywood_bg.jpg")!)
+        
+        dataSource = ScheduleDataSource(tableView: scheduleTable)
+        scheduleTable.dataSource = dataSource
+        scheduleTable.delegate = dataSource
+        dataSource.selectorDelegate = self
+        scheduleTable.registerNib(UINib(nibName: "MovieScheduleCell", bundle: nil), forCellReuseIdentifier: "MovieScheduleCell")
+    }
+    
+}
+
+extension ScheduleController : SelectorProtocol {
+    func selectedRowWithMovie(scheduledMovie: ScheduledMovie) {
+        selectedMovie = scheduledMovie
+        performSegueWithIdentifier(Constants.segues.movieDetailsSegue, sender: self)
+    }
+    
+}
+

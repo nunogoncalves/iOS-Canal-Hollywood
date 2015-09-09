@@ -1,0 +1,6 @@
+framework module Kanna {
+  umbrella header "Pods-Canal Hollywood-Kanna-umbrella.h"
+
+  export *
+  module * { export * }
+}

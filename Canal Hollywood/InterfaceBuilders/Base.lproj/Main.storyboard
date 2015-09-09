@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="PVa-Ij-F99">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Hoje-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="vXZ-lx-hvc" customClass="ScheduleController" customModule="Canal_Hollywood" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pLx-A8-Pug">
+                                <rect key="frame" x="-90" y="40" width="500" height="400"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="ib1-pc-E7e"/>
+                                    <constraint firstAttribute="width" constant="500" id="zyk-hZ-EcB"/>
+                                </constraints>
+                            </webView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Yjq-GA-tUw">
+                                <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vcJ-rO-ZUQ">
+                                <rect key="frame" x="0.0" y="480" width="320" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="RFa-Bh-g5B"/>
+                                    <constraint firstAttribute="width" constant="240" id="Yb9-ZM-bfE"/>
+                                    <constraint firstAttribute="height" constant="128" id="fWp-zl-hKw"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Yb9-ZM-bfE"/>
+                                        <exclude reference="fWp-zl-hKw"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <segue destination="PTo-pn-Tvu" kind="embed" identifier="DatePickerSegue" id="O9j-C7-aFU"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="vcJ-rO-ZUQ" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="-64" id="0ef-8L-dgg"/>
+                            <constraint firstAttribute="trailing" secondItem="vcJ-rO-ZUQ" secondAttribute="trailing" id="2DH-uk-tqh"/>
+                            <constraint firstItem="Yjq-GA-tUw" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="30D-mm-1tX"/>
+                            <constraint firstItem="Yjq-GA-tUw" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="8kl-ej-Tzr"/>
+                            <constraint firstAttribute="centerY" secondItem="pLx-A8-Pug" secondAttribute="centerY" id="Gsy-r3-6YJ"/>
+                            <constraint firstAttribute="centerX" secondItem="vcJ-rO-ZUQ" secondAttribute="centerX" id="HOX-AG-DWK"/>
+                            <constraint firstAttribute="trailing" secondItem="Yjq-GA-tUw" secondAttribute="trailing" id="MP7-ct-t3u"/>
+                            <constraint firstItem="vcJ-rO-ZUQ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="RzV-wm-Hac"/>
+                            <constraint firstAttribute="centerY" secondItem="vcJ-rO-ZUQ" secondAttribute="centerY" id="h1b-1I-m0g"/>
+                            <constraint firstAttribute="centerX" secondItem="pLx-A8-Pug" secondAttribute="centerX" id="jRe-JE-8gs"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="vcJ-rO-ZUQ" secondAttribute="bottom" constant="-200" id="sHS-jy-QGZ"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Yjq-GA-tUw" secondAttribute="bottom" id="uMc-Py-r2I"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="0ef-8L-dgg"/>
+                                <exclude reference="HOX-AG-DWK"/>
+                                <exclude reference="h1b-1I-m0g"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="Hoje" id="sxZ-Rt-edk">
+                        <barButtonItem key="rightBarButtonItem" title="Dia" id="s3Q-9M-Ri2"/>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="datePickerBottomConstraint" destination="sHS-jy-QGZ" id="GVz-aj-fDG"/>
+                        <outlet property="datePickerController" destination="vcJ-rO-ZUQ" id="1Al-Ea-ylU"/>
+                        <outlet property="gifWebView" destination="pLx-A8-Pug" id="2RR-tb-DGv"/>
+                        <outlet property="scheduleTable" destination="Yjq-GA-tUw" id="MKJ-Jh-b1A"/>
+                        <segue destination="a3v-R1-Zrd" kind="show" identifier="MovieDetailsSegue" id="LVX-gx-71V"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1201" y="234"/>
+        </scene>
+        <!--Movie Details Controller-->
+        <scene sceneID="KuB-XM-WPp">
+            <objects>
+                <viewController id="a3v-R1-Zrd" customClass="MovieDetailsController" customModule="Canal_Hollywood" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JY9-1d-ukJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="oUT-JD-yTY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fzv-a5-ZRi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gM1-Qx-Tkb">
+                                <rect key="frame" x="0.0" y="74" width="320" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="6op-82-S2Z"/>
+                                    <constraint firstAttribute="width" constant="320" id="NgM-Ud-Lfl"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ivy-E9-0S1">
+                                <rect key="frame" x="16" y="322" width="288" height="21.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="18"/>
+                                <color key="textColor" red="0.0" green="0.59999999999999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="59N-1Y-SHF">
+                                <rect key="frame" x="16" y="342" width="288" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gM1-Qx-Tkb" firstAttribute="top" secondItem="JY9-1d-ukJ" secondAttribute="bottom" constant="10" id="2ka-ST-7rP"/>
+                            <constraint firstAttribute="centerX" secondItem="gM1-Qx-Tkb" secondAttribute="centerX" id="6P9-PG-llQ"/>
+                            <constraint firstItem="ivy-E9-0S1" firstAttribute="leading" secondItem="59N-1Y-SHF" secondAttribute="leading" id="Agt-8s-zFT"/>
+                            <constraint firstItem="59N-1Y-SHF" firstAttribute="top" secondItem="ivy-E9-0S1" secondAttribute="bottom" constant="-1.5" id="IXF-Q7-QP1"/>
+                            <constraint firstItem="ivy-E9-0S1" firstAttribute="top" secondItem="gM1-Qx-Tkb" secondAttribute="bottom" constant="8" id="LLI-xI-0Bp"/>
+                            <constraint firstItem="ivy-E9-0S1" firstAttribute="leading" secondItem="fzv-a5-ZRi" secondAttribute="leadingMargin" id="Law-8F-dO0"/>
+                            <constraint firstItem="59N-1Y-SHF" firstAttribute="trailing" secondItem="fzv-a5-ZRi" secondAttribute="trailingMargin" id="OwB-ZH-P5p"/>
+                            <constraint firstItem="ivy-E9-0S1" firstAttribute="trailing" secondItem="fzv-a5-ZRi" secondAttribute="trailingMargin" id="dHm-oR-nwj"/>
+                            <constraint firstItem="ivy-E9-0S1" firstAttribute="trailing" secondItem="59N-1Y-SHF" secondAttribute="trailing" id="s2S-yc-5K3"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="OwB-ZH-P5p"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="imageView" destination="gM1-Qx-Tkb" id="f3g-Hs-qgm"/>
+                        <outlet property="localNameLabel" destination="59N-1Y-SHF" id="XoP-fa-M9m"/>
+                        <outlet property="originalNameLabel" destination="ivy-E9-0S1" id="P94-mJ-ONN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hlv-B7-K9L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1577" y="234"/>
+        </scene>
+        <!--Day Picker Controller-->
+        <scene sceneID="a3W-9g-fgN">
+            <objects>
+                <viewController id="PTo-pn-Tvu" customClass="DayPickerController" customModule="Canal_Hollywood" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Xlm-C9-YcE"/>
+                        <viewControllerLayoutGuide type="bottom" id="K1b-cN-2mO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wST-Fh-Dnt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="lra-fz-W01">
+                                <rect key="frame" x="0.0" y="38" width="320" height="162"/>
+                                <color key="backgroundColor" red="0.50588235290000005" green="0.81960784310000001" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <date key="date" timeIntervalSinceReferenceDate="463270515.386374">
+                                    <!--2015-09-06 22:15:15 +0000-->
+                                </date>
+                                <locale key="locale" localeIdentifier="pt_PT"/>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ib4-pp-syX">
+                                <rect key="frame" x="212" y="8" width="61" height="30"/>
+                                <state key="normal" title="Cancelar">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelClicked:" destination="PTo-pn-Tvu" eventType="touchUpInside" id="3wh-Bu-hUx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="79R-mc-f7f">
+                                <rect key="frame" x="274" y="8" width="30" height="30"/>
+                                <state key="normal" title="Ok">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="okClicked:" destination="PTo-pn-Tvu" eventType="touchUpInside" id="wMC-98-XZq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="79R-mc-f7f" firstAttribute="centerY" secondItem="ib4-pp-syX" secondAttribute="centerY" id="MBW-Rl-hkV"/>
+                            <constraint firstItem="79R-mc-f7f" firstAttribute="top" secondItem="Xlm-C9-YcE" secondAttribute="bottom" constant="8" id="OpM-1l-99M"/>
+                            <constraint firstItem="79R-mc-f7f" firstAttribute="leading" secondItem="ib4-pp-syX" secondAttribute="trailing" constant="1" id="Vm4-51-krw"/>
+                            <constraint firstItem="79R-mc-f7f" firstAttribute="trailing" secondItem="wST-Fh-Dnt" secondAttribute="trailingMargin" id="eFX-a0-X6K"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="datePicker" destination="lra-fz-W01" id="tGZ-iC-JAc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n4H-GC-Xd1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1201" y="673"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="eZg-I6-eRg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PVa-Ij-F99" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aDS-wt-yUK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="urr-uA-3Kj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v3E-En-a4F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="600" y="327"/>
+        </scene>
+    </scenes>
+</document>

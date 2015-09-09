@@ -1,0 +1,620 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8542E0A01B9FA2E6006AAD53 /* onair_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8542E09F1B9FA2E6006AAD53 /* onair_icon.png */; };
+		8543540F1B9CFB0F008EE4E5 /* calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = 8543540E1B9CFB0F008EE4E5 /* calendar.png */; };
+		856DF5161B9E416C00AF426E /* movie_item_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 856DF5151B9E416C00AF426E /* movie_item_background.png */; };
+		856DF5181B9E462500AF426E /* opening_video.gif in Resources */ = {isa = PBXBuildFile; fileRef = 856DF5171B9E462500AF426E /* opening_video.gif */; };
+		856DF51A1B9E4D7E00AF426E /* waiting.gif in Resources */ = {isa = PBXBuildFile; fileRef = 856DF5191B9E4D7D00AF426E /* waiting.gif */; };
+		8571A48C1B9CC5F60077F1F0 /* ScheduleOfDayFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8571A48B1B9CC5F60077F1F0 /* ScheduleOfDayFetcher.swift */; };
+		8571A4921B9CEEBD0077F1F0 /* hollywood_bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8571A4911B9CEEBD0077F1F0 /* hollywood_bg.jpg */; };
+		8571A4941B9CF29B0077F1F0 /* DayPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8571A4931B9CF29B0077F1F0 /* DayPickerController.swift */; };
+		857953E81B9CB07B0064EAE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857953E71B9CB07B0064EAE3 /* AppDelegate.swift */; };
+		857953EA1B9CB07B0064EAE3 /* ScheduleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857953E91B9CB07B0064EAE3 /* ScheduleController.swift */; };
+		857953ED1B9CB07B0064EAE3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 857953EB1B9CB07B0064EAE3 /* Main.storyboard */; };
+		857953EF1B9CB07B0064EAE3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 857953EE1B9CB07B0064EAE3 /* Images.xcassets */; };
+		857953FE1B9CB07B0064EAE3 /* Canal_HollywoodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857953FD1B9CB07B0064EAE3 /* Canal_HollywoodTests.swift */; };
+		857954091B9CB1690064EAE3 /* MovieScheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857954071B9CB1690064EAE3 /* MovieScheduleCell.swift */; };
+		8579540A1B9CB1690064EAE3 /* MovieScheduleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 857954081B9CB1690064EAE3 /* MovieScheduleCell.xib */; };
+		8579540C1B9CB2EE0064EAE3 /* ScheduledMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8579540B1B9CB2EE0064EAE3 /* ScheduledMovie.swift */; };
+		8579540E1B9CBFC50064EAE3 /* ScheduleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8579540D1B9CBFC50064EAE3 /* ScheduleDataSource.swift */; };
+		85FBDA831BA018F700FF443B /* MovieDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FBDA821BA018F700FF443B /* MovieDetailsController.swift */; };
+		85FBDA851BA01A5200FF443B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FBDA841BA01A5200FF443B /* Constants.swift */; };
+		B4366FCD364755AFAF5BBA74 /* Pods_Canal_Hollywood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6344127114FC20BC687427FC /* Pods_Canal_Hollywood.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		857953F81B9CB07B0064EAE3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 857953DA1B9CB07B0064EAE3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 857953E11B9CB07B0064EAE3;
+			remoteInfo = "Canal Hollywood";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		288DCC3E09415C35775776D2 /* Pods-Canal Hollywood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Canal Hollywood.release.xcconfig"; path = "Pods/Target Support Files/Pods-Canal Hollywood/Pods-Canal Hollywood.release.xcconfig"; sourceTree = "<group>"; };
+		3AFFDD99FC44970E2341E8ED /* Pods-Canal Hollywood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Canal Hollywood.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Canal Hollywood/Pods-Canal Hollywood.debug.xcconfig"; sourceTree = "<group>"; };
+		6344127114FC20BC687427FC /* Pods_Canal_Hollywood.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Canal_Hollywood.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8542E09F1B9FA2E6006AAD53 /* onair_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = onair_icon.png; sourceTree = "<group>"; };
+		8543540E1B9CFB0F008EE4E5 /* calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendar.png; sourceTree = "<group>"; };
+		856DF5151B9E416C00AF426E /* movie_item_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = movie_item_background.png; sourceTree = "<group>"; };
+		856DF5171B9E462500AF426E /* opening_video.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = opening_video.gif; sourceTree = "<group>"; };
+		856DF5191B9E4D7D00AF426E /* waiting.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = waiting.gif; sourceTree = "<group>"; };
+		8571A48B1B9CC5F60077F1F0 /* ScheduleOfDayFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleOfDayFetcher.swift; sourceTree = "<group>"; };
+		8571A4911B9CEEBD0077F1F0 /* hollywood_bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hollywood_bg.jpg; sourceTree = "<group>"; };
+		8571A4931B9CF29B0077F1F0 /* DayPickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayPickerController.swift; sourceTree = "<group>"; };
+		857953E21B9CB07B0064EAE3 /* Canal Hollywood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Canal Hollywood.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		857953E61B9CB07B0064EAE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		857953E71B9CB07B0064EAE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		857953E91B9CB07B0064EAE3 /* ScheduleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleController.swift; sourceTree = "<group>"; };
+		857953EC1B9CB07B0064EAE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		857953EE1B9CB07B0064EAE3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		857953F71B9CB07B0064EAE3 /* Canal HollywoodTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Canal HollywoodTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		857953FC1B9CB07B0064EAE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		857953FD1B9CB07B0064EAE3 /* Canal_HollywoodTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Canal_HollywoodTests.swift; sourceTree = "<group>"; };
+		857954071B9CB1690064EAE3 /* MovieScheduleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieScheduleCell.swift; sourceTree = "<group>"; };
+		857954081B9CB1690064EAE3 /* MovieScheduleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieScheduleCell.xib; sourceTree = "<group>"; };
+		8579540B1B9CB2EE0064EAE3 /* ScheduledMovie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduledMovie.swift; sourceTree = "<group>"; };
+		8579540D1B9CBFC50064EAE3 /* ScheduleDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleDataSource.swift; sourceTree = "<group>"; };
+		85FBDA821BA018F700FF443B /* MovieDetailsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailsController.swift; sourceTree = "<group>"; };
+		85FBDA841BA01A5200FF443B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		857953DF1B9CB07B0064EAE3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4366FCD364755AFAF5BBA74 /* Pods_Canal_Hollywood.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		857953F41B9CB07B0064EAE3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		857953D91B9CB07B0064EAE3 = {
+			isa = PBXGroup;
+			children = (
+				857953E41B9CB07B0064EAE3 /* Canal Hollywood */,
+				857953FA1B9CB07B0064EAE3 /* Canal HollywoodTests */,
+				E1BE70EF8F223D497778C84F /* Frameworks */,
+				F6B903CF0109A12266097850 /* Pods */,
+				857953E31B9CB07B0064EAE3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		857953E31B9CB07B0064EAE3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				857953E21B9CB07B0064EAE3 /* Canal Hollywood.app */,
+				857953F71B9CB07B0064EAE3 /* Canal HollywoodTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		857953E41B9CB07B0064EAE3 /* Canal Hollywood */ = {
+			isa = PBXGroup;
+			children = (
+				85FBDA7A1BA0146A00FF443B /* Controllers */,
+				85FBDA7B1BA0147E00FF443B /* CustomViews */,
+				85FBDA791BA0145E00FF443B /* DataSources */,
+				85FBDA811BA0157000FF443B /* Delegates */,
+				85FBDA801BA0155800FF443B /* Extensions */,
+				85FBDA781BA00F8000FF443B /* Images */,
+				85FBDA7F1BA0151A00FF443B /* InterfaceBuilders */,
+				85FBDA7C1BA014A600FF443B /* Models */,
+				857953E51B9CB07B0064EAE3 /* Supporting Files */,
+				85FBDA7D1BA014DD00FF443B /* Usecases */,
+				857953EE1B9CB07B0064EAE3 /* Images.xcassets */,
+			);
+			path = "Canal Hollywood";
+			sourceTree = "<group>";
+		};
+		857953E51B9CB07B0064EAE3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				85FBDA841BA01A5200FF443B /* Constants.swift */,
+				857953E61B9CB07B0064EAE3 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		857953FA1B9CB07B0064EAE3 /* Canal HollywoodTests */ = {
+			isa = PBXGroup;
+			children = (
+				857953FB1B9CB07B0064EAE3 /* Supporting Files */,
+				857953FD1B9CB07B0064EAE3 /* Canal_HollywoodTests.swift */,
+			);
+			path = "Canal HollywoodTests";
+			sourceTree = "<group>";
+		};
+		857953FB1B9CB07B0064EAE3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				857953FC1B9CB07B0064EAE3 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		85FBDA781BA00F8000FF443B /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				8543540E1B9CFB0F008EE4E5 /* calendar.png */,
+				8571A4911B9CEEBD0077F1F0 /* hollywood_bg.jpg */,
+				856DF5151B9E416C00AF426E /* movie_item_background.png */,
+				8542E09F1B9FA2E6006AAD53 /* onair_icon.png */,
+				856DF5171B9E462500AF426E /* opening_video.gif */,
+				856DF5191B9E4D7D00AF426E /* waiting.gif */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		85FBDA791BA0145E00FF443B /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				8579540D1B9CBFC50064EAE3 /* ScheduleDataSource.swift */,
+			);
+			path = DataSources;
+			sourceTree = "<group>";
+		};
+		85FBDA7A1BA0146A00FF443B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8571A4931B9CF29B0077F1F0 /* DayPickerController.swift */,
+				85FBDA821BA018F700FF443B /* MovieDetailsController.swift */,
+				857953E91B9CB07B0064EAE3 /* ScheduleController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		85FBDA7B1BA0147E00FF443B /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				857954071B9CB1690064EAE3 /* MovieScheduleCell.swift */,
+				857954081B9CB1690064EAE3 /* MovieScheduleCell.xib */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		85FBDA7C1BA014A600FF443B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8579540B1B9CB2EE0064EAE3 /* ScheduledMovie.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		85FBDA7D1BA014DD00FF443B /* Usecases */ = {
+			isa = PBXGroup;
+			children = (
+				8571A48B1B9CC5F60077F1F0 /* ScheduleOfDayFetcher.swift */,
+			);
+			path = Usecases;
+			sourceTree = "<group>";
+		};
+		85FBDA7F1BA0151A00FF443B /* InterfaceBuilders */ = {
+			isa = PBXGroup;
+			children = (
+				857953EB1B9CB07B0064EAE3 /* Main.storyboard */,
+			);
+			path = InterfaceBuilders;
+			sourceTree = "<group>";
+		};
+		85FBDA801BA0155800FF443B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		85FBDA811BA0157000FF443B /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				857953E71B9CB07B0064EAE3 /* AppDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		E1BE70EF8F223D497778C84F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6344127114FC20BC687427FC /* Pods_Canal_Hollywood.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F6B903CF0109A12266097850 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3AFFDD99FC44970E2341E8ED /* Pods-Canal Hollywood.debug.xcconfig */,
+				288DCC3E09415C35775776D2 /* Pods-Canal Hollywood.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		857953E11B9CB07B0064EAE3 /* Canal Hollywood */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 857954011B9CB07B0064EAE3 /* Build configuration list for PBXNativeTarget "Canal Hollywood" */;
+			buildPhases = (
+				104C1778F291B7EC319C5FF3 /* Check Pods Manifest.lock */,
+				857953DE1B9CB07B0064EAE3 /* Sources */,
+				857953DF1B9CB07B0064EAE3 /* Frameworks */,
+				857953E01B9CB07B0064EAE3 /* Resources */,
+				AE513745051DF7C263AA06FE /* Embed Pods Frameworks */,
+				7587DC7EAC5124960434CCEF /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Canal Hollywood";
+			productName = "Canal Hollywood";
+			productReference = 857953E21B9CB07B0064EAE3 /* Canal Hollywood.app */;
+			productType = "com.apple.product-type.application";
+		};
+		857953F61B9CB07B0064EAE3 /* Canal HollywoodTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 857954041B9CB07B0064EAE3 /* Build configuration list for PBXNativeTarget "Canal HollywoodTests" */;
+			buildPhases = (
+				857953F31B9CB07B0064EAE3 /* Sources */,
+				857953F41B9CB07B0064EAE3 /* Frameworks */,
+				857953F51B9CB07B0064EAE3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				857953F91B9CB07B0064EAE3 /* PBXTargetDependency */,
+			);
+			name = "Canal HollywoodTests";
+			productName = "Canal HollywoodTests";
+			productReference = 857953F71B9CB07B0064EAE3 /* Canal HollywoodTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		857953DA1B9CB07B0064EAE3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "Nuno Gonçalves";
+				TargetAttributes = {
+					857953E11B9CB07B0064EAE3 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					857953F61B9CB07B0064EAE3 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 857953E11B9CB07B0064EAE3;
+					};
+				};
+			};
+			buildConfigurationList = 857953DD1B9CB07B0064EAE3 /* Build configuration list for PBXProject "Canal Hollywood" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 857953D91B9CB07B0064EAE3;
+			productRefGroup = 857953E31B9CB07B0064EAE3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				857953E11B9CB07B0064EAE3 /* Canal Hollywood */,
+				857953F61B9CB07B0064EAE3 /* Canal HollywoodTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		857953E01B9CB07B0064EAE3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8571A4921B9CEEBD0077F1F0 /* hollywood_bg.jpg in Resources */,
+				856DF5161B9E416C00AF426E /* movie_item_background.png in Resources */,
+				8542E0A01B9FA2E6006AAD53 /* onair_icon.png in Resources */,
+				856DF51A1B9E4D7E00AF426E /* waiting.gif in Resources */,
+				857953ED1B9CB07B0064EAE3 /* Main.storyboard in Resources */,
+				856DF5181B9E462500AF426E /* opening_video.gif in Resources */,
+				8543540F1B9CFB0F008EE4E5 /* calendar.png in Resources */,
+				8579540A1B9CB1690064EAE3 /* MovieScheduleCell.xib in Resources */,
+				857953EF1B9CB07B0064EAE3 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		857953F51B9CB07B0064EAE3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		104C1778F291B7EC319C5FF3 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7587DC7EAC5124960434CCEF /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Canal Hollywood/Pods-Canal Hollywood-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE513745051DF7C263AA06FE /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Canal Hollywood/Pods-Canal Hollywood-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		857953DE1B9CB07B0064EAE3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8579540C1B9CB2EE0064EAE3 /* ScheduledMovie.swift in Sources */,
+				85FBDA831BA018F700FF443B /* MovieDetailsController.swift in Sources */,
+				857954091B9CB1690064EAE3 /* MovieScheduleCell.swift in Sources */,
+				8571A4941B9CF29B0077F1F0 /* DayPickerController.swift in Sources */,
+				8571A48C1B9CC5F60077F1F0 /* ScheduleOfDayFetcher.swift in Sources */,
+				857953EA1B9CB07B0064EAE3 /* ScheduleController.swift in Sources */,
+				857953E81B9CB07B0064EAE3 /* AppDelegate.swift in Sources */,
+				8579540E1B9CBFC50064EAE3 /* ScheduleDataSource.swift in Sources */,
+				85FBDA851BA01A5200FF443B /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		857953F31B9CB07B0064EAE3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				857953FE1B9CB07B0064EAE3 /* Canal_HollywoodTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		857953F91B9CB07B0064EAE3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 857953E11B9CB07B0064EAE3 /* Canal Hollywood */;
+			targetProxy = 857953F81B9CB07B0064EAE3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		857953EB1B9CB07B0064EAE3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				857953EC1B9CB07B0064EAE3 /* Base */,
+			);
+			name = Main.storyboard;
+			path = .;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		857953FF1B9CB07B0064EAE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		857954001B9CB07B0064EAE3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		857954021B9CB07B0064EAE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3AFFDD99FC44970E2341E8ED /* Pods-Canal Hollywood.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Canal Hollywood/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		857954031B9CB07B0064EAE3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 288DCC3E09415C35775776D2 /* Pods-Canal Hollywood.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Canal Hollywood/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		857954051B9CB07B0064EAE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Canal HollywoodTests/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Canal Hollywood.app/Canal Hollywood";
+			};
+			name = Debug;
+		};
+		857954061B9CB07B0064EAE3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Canal HollywoodTests/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Canal Hollywood.app/Canal Hollywood";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		857953DD1B9CB07B0064EAE3 /* Build configuration list for PBXProject "Canal Hollywood" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				857953FF1B9CB07B0064EAE3 /* Debug */,
+				857954001B9CB07B0064EAE3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		857954011B9CB07B0064EAE3 /* Build configuration list for PBXNativeTarget "Canal Hollywood" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				857954021B9CB07B0064EAE3 /* Debug */,
+				857954031B9CB07B0064EAE3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		857954041B9CB07B0064EAE3 /* Build configuration list for PBXNativeTarget "Canal HollywoodTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				857954051B9CB07B0064EAE3 /* Debug */,
+				857954061B9CB07B0064EAE3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 857953DA1B9CB07B0064EAE3 /* Project object */;
+}
