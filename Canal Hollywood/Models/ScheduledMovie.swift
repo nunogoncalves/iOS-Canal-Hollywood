@@ -19,12 +19,17 @@ class ScheduledMovie {
     var startTime: NSDate?
     var endTime: NSDate?
     
-    init(originalName: String, localName: String, imageUrl: String, startTimeStr: String, genre: String) {
+    var url: String?
+    
+    var summary: String?
+    
+    init(originalName: String, localName: String, imageUrl: String, startTimeStr: String, genre: String, url: String) {
         self.localName = localName
         self.originalName = originalName
         self.imageUrl = imageUrl
         self.startTimeStr = startTimeStr
         self.genre = genre
+        self.url = url
     }
     
     func isNow() -> Bool {

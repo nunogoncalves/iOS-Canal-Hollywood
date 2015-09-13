@@ -10,6 +10,7 @@ import UIKit
 
 class MovieScheduleCell: UITableViewCell {
 
+    @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var onAirImage: UIImageView!
     @IBOutlet weak var movieLocalNameLabel: UILabel!
     @IBOutlet weak var movieOriginalNameLabel: UILabel!

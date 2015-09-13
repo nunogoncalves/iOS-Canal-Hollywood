@@ -121,18 +121,31 @@
                                 <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xx4-K9-Ezr">
+                                <rect key="frame" x="16" y="366" width="288" height="106"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="106" id="yhX-0K-vtc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="gM1-Qx-Tkb" firstAttribute="top" secondItem="JY9-1d-ukJ" secondAttribute="bottom" constant="10" id="2ka-ST-7rP"/>
+                            <constraint firstItem="Xx4-K9-Ezr" firstAttribute="top" secondItem="JY9-1d-ukJ" secondAttribute="bottom" constant="302" id="6Mh-lI-zFI"/>
                             <constraint firstAttribute="centerX" secondItem="gM1-Qx-Tkb" secondAttribute="centerX" id="6P9-PG-llQ"/>
                             <constraint firstItem="ivy-E9-0S1" firstAttribute="leading" secondItem="59N-1Y-SHF" secondAttribute="leading" id="Agt-8s-zFT"/>
                             <constraint firstItem="59N-1Y-SHF" firstAttribute="top" secondItem="ivy-E9-0S1" secondAttribute="bottom" constant="-1.5" id="IXF-Q7-QP1"/>
                             <constraint firstItem="ivy-E9-0S1" firstAttribute="top" secondItem="gM1-Qx-Tkb" secondAttribute="bottom" constant="8" id="LLI-xI-0Bp"/>
                             <constraint firstItem="ivy-E9-0S1" firstAttribute="leading" secondItem="fzv-a5-ZRi" secondAttribute="leadingMargin" id="Law-8F-dO0"/>
+                            <constraint firstItem="Xx4-K9-Ezr" firstAttribute="trailing" secondItem="fzv-a5-ZRi" secondAttribute="trailingMargin" id="MOY-Y2-RBK"/>
                             <constraint firstItem="59N-1Y-SHF" firstAttribute="trailing" secondItem="fzv-a5-ZRi" secondAttribute="trailingMargin" id="OwB-ZH-P5p"/>
                             <constraint firstItem="ivy-E9-0S1" firstAttribute="trailing" secondItem="fzv-a5-ZRi" secondAttribute="trailingMargin" id="dHm-oR-nwj"/>
+                            <constraint firstItem="Xx4-K9-Ezr" firstAttribute="leading" secondItem="fzv-a5-ZRi" secondAttribute="leadingMargin" id="puN-MW-DIJ"/>
                             <constraint firstItem="ivy-E9-0S1" firstAttribute="trailing" secondItem="59N-1Y-SHF" secondAttribute="trailing" id="s2S-yc-5K3"/>
+                            <constraint firstItem="Xx4-K9-Ezr" firstAttribute="top" secondItem="59N-1Y-SHF" secondAttribute="bottom" constant="3.5" id="xVR-wO-j6N"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -144,6 +157,7 @@
                     <connections>
                         <outlet property="imageView" destination="gM1-Qx-Tkb" id="f3g-Hs-qgm"/>
                         <outlet property="localNameLabel" destination="59N-1Y-SHF" id="XoP-fa-M9m"/>
+                        <outlet property="movieSummary" destination="Xx4-K9-Ezr" id="0wV-W6-9H6"/>
                         <outlet property="originalNameLabel" destination="ivy-E9-0S1" id="P94-mJ-ONN"/>
                     </connections>
                 </viewController>

@@ -57,13 +57,15 @@ class ScheduleOfDayFetcher {
         let bulkGenre = element.css("#lengua-roja_").toHTML
         let genre = processGenreType(bulkGenre!)
         var startTimeStr = element.css("#lengua-roja_").text!
+        var url = element.css("a")[0]["href"]!
         
         let movie = ScheduledMovie(
             originalName: originalName,
             localName: name,
             imageUrl: imageUrl,
             startTimeStr: startTimeStr,
-            genre: genre
+            genre: genre,
+            url: url
         )
         var startDateTime = NSDate.dateFromString("\(dateStr) \(startTimeStr)", format: "yyyy-MM-dd HH:mm")
         movie.startTime = startDateTime

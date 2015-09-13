@@ -114,6 +114,7 @@
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <connections>
+                <outlet property="backgroundImage" destination="w0t-LW-Wmr" id="IAt-fc-jnU"/>
                 <outlet property="genreLabel" destination="FvY-CE-LhB" id="a9r-Bo-Oo7"/>
                 <outlet property="movieImageView" destination="PT3-gb-Yn6" id="Uhc-s2-D0T"/>
                 <outlet property="movieLocalNameLabel" destination="0NP-bQ-sQl" id="tOo-F8-fgp"/>

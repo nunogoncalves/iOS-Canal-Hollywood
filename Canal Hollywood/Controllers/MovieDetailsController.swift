@@ -13,22 +13,21 @@ class MovieDetailsController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var originalNameLabel: UILabel!
     @IBOutlet weak var localNameLabel: UILabel!
+    @IBOutlet weak var movieSummary: UILabel!
     
     var movie: ScheduledMovie?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+     
         
         if let movie = movie {
-            dispatch_async(dispatch_get_global_queue(Int(QOS_CLASS_USER_INITIATED.value), 0)) { // 1
-                let data = NSData(contentsOfURL: NSURL(string: movie.imageUrl.stringByReplacingOccurrencesOfString("/th/", withString: "/", options: nil, range: nil))!)
-                dispatch_async(dispatch_get_main_queue()) { // 2
-                    self.imageView.image = UIImage(data: data!)
-                }
-            }
-            
+            let url = movie.imageUrl.stringByReplacingOccurrencesOfString("/th/", withString: "/", options: nil, range: nil)
+            ImageLoader.loadImageIn(imageView, url: url)
             originalNameLabel.text = movie.originalName
             localNameLabel.text = movie.localName
+            FetchMovieDetails(movie: movie)
+            movieSummary.text = movie.summary
         }
     }
 }

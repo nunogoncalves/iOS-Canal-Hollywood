@@ -10,6 +10,7 @@ import UIKit
 
 protocol SelectorProtocol {
     func selectedRowWithMovie(scheduledMovie: ScheduledMovie)
+    func setLastSelectedMovieCell(movieCell: MovieScheduleCell)
 }
 
 class ScheduleDataSource : NSObject, UITableViewDataSource, UITableViewDelegate {
@@ -52,8 +53,13 @@ class ScheduleDataSource : NSObject, UITableViewDataSource, UITableViewDelegate 
         return 90
     }
     
+    func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
+        selectorDelegate?.setLastSelectedMovieCell(tableView.cellForRowAtIndexPath(indexPath) as! MovieScheduleCell)
+        return indexPath
+    }
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         selectorDelegate?.selectedRowWithMovie(schedule[indexPath.row])
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
 
 }

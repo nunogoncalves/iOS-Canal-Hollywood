@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ScheduleController: UIViewController, UITableViewDelegate, DateDelegate {
+class ScheduleController: UIViewController, DateDelegate {
 
     
     @IBOutlet weak var datePickerController: UIView!
@@ -19,22 +19,33 @@ class ScheduleController: UIViewController, UITableViewDelegate, DateDelegate {
         didSet { configureScheduleTable() }
     }
     
+    var transition = TableCellAnimator()
+    
+    var lastSelectedRow: MovieScheduleCell?
+    
     var dataSource: ScheduleDataSource!
     
-    let datePickerAnimationDuration: NSTimeInterval = 0.5
+    let datePickerAnimationDuration: NSTimeInterval = 0.3
     
     var selectedDate = NSDate()
     var selectedMovie: ScheduledMovie?
     
+    override func viewWillAppear(animated: Bool) {
+        scheduleTable.reloadData()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        navigationController?.delegate = self
+       
         let button = UIButton.buttonWithType(.Custom) as! UIButton
         button.setImage(UIImage(named: "calendar.png"), forState: .Normal)
         button.addTarget(self, action: "selectDay", forControlEvents: .TouchUpInside)
         button.frame = CGRectMake(0, 0, 30, 30)
-        let barButtom = UIBarButtonItem(customView: button)
-        navigationItem.rightBarButtonItem = barButtom
+        let barButton = UIBarButtonItem(customView: button)
+        
+        navigationItem.rightBarButtonItem = barButton
         
         let filePath = NSBundle.mainBundle().pathForResource("waiting", ofType: "gif")!
         let gif = NSData(contentsOfFile: filePath)
@@ -111,6 +122,8 @@ class ScheduleController: UIViewController, UITableViewDelegate, DateDelegate {
         scheduleTable.registerNib(UINib(nibName: "MovieScheduleCell", bundle: nil), forCellReuseIdentifier: "MovieScheduleCell")
     }
     
+    var lastSelectedCell: MovieScheduleCell?
+    
 }
 
 extension ScheduleController : SelectorProtocol {
@@ -119,5 +132,19 @@ extension ScheduleController : SelectorProtocol {
         performSegueWithIdentifier(Constants.segues.movieDetailsSegue, sender: self)
     }
     
+    func setLastSelectedMovieCell(cell: MovieScheduleCell) {
+        lastSelectedCell = cell
+    }
+    
 }
 
+// MARK: navigation controller - custom transition methods
+
+extension ScheduleController : UINavigationControllerDelegate {
+    func navigationController(navigationController: UINavigationController, animationControllerForOperation operation: UINavigationControllerOperation, fromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        if operation == .Pop {
+            return nil
+        }
+        return transition
+    }
+}
