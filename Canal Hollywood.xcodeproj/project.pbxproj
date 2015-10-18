@@ -10,6 +10,7 @@
 		851D62B61BA6088A006AF024 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851D62B51BA6088A006AF024 /* ImageLoader.swift */; };
 		851D62B91BA60BF1006AF024 /* MovieListToDetailAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851D62B81BA60BF1006AF024 /* MovieListToDetailAnimator.swift */; };
 		851D62BB1BA617EF006AF024 /* FetchMovieDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851D62BA1BA617EF006AF024 /* FetchMovieDetails.swift */; };
+		853039B61BCD5BCF00537414 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 853039B51BCD5BCF00537414 /* LaunchScreen.storyboard */; };
 		8542E0A01B9FA2E6006AAD53 /* onair_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8542E09F1B9FA2E6006AAD53 /* onair_icon.png */; };
 		8543540F1B9CFB0F008EE4E5 /* calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = 8543540E1B9CFB0F008EE4E5 /* calendar.png */; };
 		856DF5161B9E416C00AF426E /* movie_item_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 856DF5151B9E416C00AF426E /* movie_item_background.png */; };
@@ -27,6 +28,7 @@
 		8579540A1B9CB1690064EAE3 /* MovieScheduleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 857954081B9CB1690064EAE3 /* MovieScheduleCell.xib */; };
 		8579540C1B9CB2EE0064EAE3 /* ScheduledMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8579540B1B9CB2EE0064EAE3 /* ScheduledMovie.swift */; };
 		8579540E1B9CBFC50064EAE3 /* ScheduleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8579540D1B9CBFC50064EAE3 /* ScheduleDataSource.swift */; };
+		85ADFC561BCC144B001448D6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85ADFC551BCC144B001448D6 /* Default-568h@2x.png */; };
 		85FBDA831BA018F700FF443B /* MovieDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FBDA821BA018F700FF443B /* MovieDetailsController.swift */; };
 		85FBDA851BA01A5200FF443B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FBDA841BA01A5200FF443B /* Constants.swift */; };
 		B4366FCD364755AFAF5BBA74 /* Pods_Canal_Hollywood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6344127114FC20BC687427FC /* Pods_Canal_Hollywood.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -49,6 +51,7 @@
 		851D62B51BA6088A006AF024 /* ImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		851D62B81BA60BF1006AF024 /* MovieListToDetailAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieListToDetailAnimator.swift; sourceTree = "<group>"; };
 		851D62BA1BA617EF006AF024 /* FetchMovieDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchMovieDetails.swift; sourceTree = "<group>"; };
+		853039B51BCD5BCF00537414 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8542E09F1B9FA2E6006AAD53 /* onair_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = onair_icon.png; sourceTree = "<group>"; };
 		8543540E1B9CFB0F008EE4E5 /* calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendar.png; sourceTree = "<group>"; };
 		856DF5151B9E416C00AF426E /* movie_item_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = movie_item_background.png; sourceTree = "<group>"; };
@@ -70,6 +73,7 @@
 		857954081B9CB1690064EAE3 /* MovieScheduleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieScheduleCell.xib; sourceTree = "<group>"; };
 		8579540B1B9CB2EE0064EAE3 /* ScheduledMovie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduledMovie.swift; sourceTree = "<group>"; };
 		8579540D1B9CBFC50064EAE3 /* ScheduleDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleDataSource.swift; sourceTree = "<group>"; };
+		85ADFC551BCC144B001448D6 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Canal Hollywood/Default-568h@2x.png"; sourceTree = "<group>"; };
 		85FBDA821BA018F700FF443B /* MovieDetailsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailsController.swift; sourceTree = "<group>"; };
 		85FBDA841BA01A5200FF443B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -104,6 +108,7 @@
 		857953D91B9CB07B0064EAE3 = {
 			isa = PBXGroup;
 			children = (
+				85ADFC551BCC144B001448D6 /* Default-568h@2x.png */,
 				857953E41B9CB07B0064EAE3 /* Canal Hollywood */,
 				857953FA1B9CB07B0064EAE3 /* Canal HollywoodTests */,
 				E1BE70EF8F223D497778C84F /* Frameworks */,
@@ -136,6 +141,7 @@
 				857953E51B9CB07B0064EAE3 /* Supporting Files */,
 				85FBDA7D1BA014DD00FF443B /* Usecases */,
 				857953EE1B9CB07B0064EAE3 /* Images.xcassets */,
+				853039B51BCD5BCF00537414 /* LaunchScreen.storyboard */,
 			);
 			path = "Canal Hollywood";
 			sourceTree = "<group>";
@@ -311,6 +317,7 @@
 		857953DA1B9CB07B0064EAE3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "Nuno Gonçalves";
 				TargetAttributes = {
@@ -350,11 +357,13 @@
 				8571A4921B9CEEBD0077F1F0 /* hollywood_bg.jpg in Resources */,
 				856DF5161B9E416C00AF426E /* movie_item_background.png in Resources */,
 				8542E0A01B9FA2E6006AAD53 /* onair_icon.png in Resources */,
+				85ADFC561BCC144B001448D6 /* Default-568h@2x.png in Resources */,
 				856DF51A1B9E4D7E00AF426E /* waiting.gif in Resources */,
 				857953ED1B9CB07B0064EAE3 /* Main.storyboard in Resources */,
 				856DF5181B9E462500AF426E /* opening_video.gif in Resources */,
 				8543540F1B9CFB0F008EE4E5 /* calendar.png in Resources */,
 				8579540A1B9CB1690064EAE3 /* MovieScheduleCell.xib in Resources */,
+				853039B61BCD5BCF00537414 /* LaunchScreen.storyboard in Resources */,
 				857953EF1B9CB07B0064EAE3 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -543,6 +552,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "74f5b28b-9523-4378-b5ff-91bf010c73db";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
