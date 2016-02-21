@@ -29,6 +29,7 @@
 		8579540C1B9CB2EE0064EAE3 /* ScheduledMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8579540B1B9CB2EE0064EAE3 /* ScheduledMovie.swift */; };
 		8579540E1B9CBFC50064EAE3 /* ScheduleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8579540D1B9CBFC50064EAE3 /* ScheduleDataSource.swift */; };
 		85ADFC561BCC144B001448D6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85ADFC551BCC144B001448D6 /* Default-568h@2x.png */; };
+		85D2A2311C79BDC600842AE6 /* CharlieChaplinGifView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D2A2301C79BDC600842AE6 /* CharlieChaplinGifView.swift */; };
 		85FBDA831BA018F700FF443B /* MovieDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FBDA821BA018F700FF443B /* MovieDetailsController.swift */; };
 		85FBDA851BA01A5200FF443B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FBDA841BA01A5200FF443B /* Constants.swift */; };
 		B4366FCD364755AFAF5BBA74 /* Pods_Canal_Hollywood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6344127114FC20BC687427FC /* Pods_Canal_Hollywood.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -74,6 +75,7 @@
 		8579540B1B9CB2EE0064EAE3 /* ScheduledMovie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduledMovie.swift; sourceTree = "<group>"; };
 		8579540D1B9CBFC50064EAE3 /* ScheduleDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleDataSource.swift; sourceTree = "<group>"; };
 		85ADFC551BCC144B001448D6 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Canal Hollywood/Default-568h@2x.png"; sourceTree = "<group>"; };
+		85D2A2301C79BDC600842AE6 /* CharlieChaplinGifView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharlieChaplinGifView.swift; sourceTree = "<group>"; };
 		85FBDA821BA018F700FF443B /* MovieDetailsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailsController.swift; sourceTree = "<group>"; };
 		85FBDA841BA01A5200FF443B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -208,6 +210,7 @@
 			children = (
 				857954071B9CB1690064EAE3 /* MovieScheduleCell.swift */,
 				857954081B9CB1690064EAE3 /* MovieScheduleCell.xib */,
+				85D2A2301C79BDC600842AE6 /* CharlieChaplinGifView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -438,6 +441,7 @@
 				851D62B61BA6088A006AF024 /* ImageLoader.swift in Sources */,
 				8571A48C1B9CC5F60077F1F0 /* ScheduleOfDayFetcher.swift in Sources */,
 				857953EA1B9CB07B0064EAE3 /* ScheduleController.swift in Sources */,
+				85D2A2311C79BDC600842AE6 /* CharlieChaplinGifView.swift in Sources */,
 				857953E81B9CB07B0064EAE3 /* AppDelegate.swift in Sources */,
 				851D62B91BA60BF1006AF024 /* MovieListToDetailAnimator.swift in Sources */,
 				8579540E1B9CBFC50064EAE3 /* ScheduleDataSource.swift in Sources */,

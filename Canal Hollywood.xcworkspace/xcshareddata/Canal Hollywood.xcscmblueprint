@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "A8C33A627E199CA211CB800A819A32C27588F74A",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "A8C33A627E199CA211CB800A819A32C27588F74A" : 0,
+    "A491FEC3504CACA8A367681F1E66F589840DE7DF" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "FA21A273-BA5D-4D03-B986-65493B3AAB28",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "A8C33A627E199CA211CB800A819A32C27588F74A" : "Canal%20Hollywood",
+    "A491FEC3504CACA8A367681F1E66F589840DE7DF" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Canal Hollywood",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Canal Hollywood.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/nunogoncalves\/iOS-GitHubAwards.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A491FEC3504CACA8A367681F1E66F589840DE7DF"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/nunogoncalves\/iOS-Canal-Hollywood.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A8C33A627E199CA211CB800A819A32C27588F74A"
+    }
+  ]
+}

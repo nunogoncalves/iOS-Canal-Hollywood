@@ -1,0 +1,21 @@
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "59N-1Y-SHF"; */
+"59N-1Y-SHF.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Ok"; ObjectID = "79R-mc-f7f"; */
+"79R-mc-f7f.normalTitle" = "Ok";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Xx4-K9-Ezr"; */
+"Xx4-K9-Ezr.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Cancelar"; ObjectID = "ib4-pp-syX"; */
+"ib4-pp-syX.normalTitle" = "Cancelar";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "ivy-E9-0S1"; */
+"ivy-E9-0S1.text" = "Label";
+
+/* Class = "UIBarButtonItem"; title = "Dia"; ObjectID = "s3Q-9M-Ri2"; */
+"s3Q-9M-Ri2.title" = "Dia";
+
+/* Class = "UINavigationItem"; title = "Hoje"; ObjectID = "sxZ-Rt-edk"; */
+"sxZ-Rt-edk.title" = "Hoje";

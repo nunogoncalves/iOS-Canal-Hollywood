@@ -47,12 +47,12 @@ class ScheduleController: UIViewController, DateDelegate {
         
         navigationItem.rightBarButtonItem = barButton
         
-        let filePath = NSBundle.mainBundle().pathForResource("waiting", ofType: "gif")!
-        let gif = NSData(contentsOfFile: filePath)
-        gifWebView.loadData(gif, MIMEType: "image/gif", textEncodingName: nil, baseURL: nil)
-        gifWebView.contentMode = UIViewContentMode.Center
-        gifWebView.scalesPageToFit = true
-        gifWebView.contentMode = UIViewContentMode.Center
+//        let filePath = NSBundle.mainBundle().pathForResource("waiting", ofType: "gif")!
+//        let gif = NSData(contentsOfFile: filePath)
+//        gifWebView.loadData(gif, MIMEType: "image/gif", textEncodingName: nil, baseURL: nil)
+//        gifWebView.contentMode = UIViewContentMode.Center
+//        gifWebView.scalesPageToFit = true
+//        gifWebView.contentMode = UIViewContentMode.Center
     
         scheduleTable.hidden = true
         gifWebView.hidden = false
