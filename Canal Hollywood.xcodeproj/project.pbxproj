@@ -32,7 +32,7 @@
 		85D2A2311C79BDC600842AE6 /* CharlieChaplinGifView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D2A2301C79BDC600842AE6 /* CharlieChaplinGifView.swift */; };
 		85FBDA831BA018F700FF443B /* MovieDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FBDA821BA018F700FF443B /* MovieDetailsController.swift */; };
 		85FBDA851BA01A5200FF443B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FBDA841BA01A5200FF443B /* Constants.swift */; };
-		B4366FCD364755AFAF5BBA74 /* Pods_Canal_Hollywood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6344127114FC20BC687427FC /* Pods_Canal_Hollywood.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		B4366FCD364755AFAF5BBA74 /* Pods_Canal_Hollywood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6344127114FC20BC687427FC /* Pods_Canal_Hollywood.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -321,7 +321,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Nuno Gonçalves";
 				TargetAttributes = {
 					857953E11B9CB07B0064EAE3 = {
@@ -501,6 +501,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -569,6 +570,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Canal Hollywood/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.numicago.ios.canalhollywood;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -580,6 +582,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Canal Hollywood/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.numicago.ios.canalhollywood;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -598,6 +601,7 @@
 				);
 				INFOPLIST_FILE = "Canal HollywoodTests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.numicago.ios.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Canal Hollywood.app/Canal Hollywood";
 			};
@@ -613,6 +617,7 @@
 				);
 				INFOPLIST_FILE = "Canal HollywoodTests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.numicago.ios.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Canal Hollywood.app/Canal Hollywood";
 			};

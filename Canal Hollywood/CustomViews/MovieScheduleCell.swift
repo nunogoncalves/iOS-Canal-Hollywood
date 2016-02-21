@@ -25,7 +25,7 @@ class MovieScheduleCell: UITableViewCell {
             startTimeLabel.text = scheduledMovie!.startTimeStr
             genreLabel.text = scheduledMovie!.genre
             onAirImage.hidden = !scheduledMovie!.isNow()
-            dispatch_async(dispatch_get_global_queue(Int(QOS_CLASS_USER_INITIATED.value), 0)) { // 1
+            dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0)) { // 1
                 let data = NSData(contentsOfURL: NSURL(string: self.scheduledMovie!.imageUrl)!)
                 dispatch_async(dispatch_get_main_queue()) { // 2
                     self.movieImageView.image = UIImage(data: data!)

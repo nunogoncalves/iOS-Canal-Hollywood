@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-Canal Hollywood-Kanna.xcscheme</key>
+		<key>Kanna.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -17,12 +17,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>776809592B5AEE36E435B978</key>
+		<key>6CEA67D679EB2909313D67C4D4B61317</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9D6648BEC0523648998ED37B</key>
+		<key>B6312CAD7E18804AD5E11308495CFD52</key>
 		<dict>
 			<key>primary</key>
 			<true/>

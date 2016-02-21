@@ -27,23 +27,26 @@ class ScheduleOfDayFetcher {
     func fetch() -> [ScheduledMovie] {
         var scheduleMovies: [ScheduledMovie] = []
         
-        let data = NSData(contentsOfURL: url)
-        let dataStr = NSString(data: data!, encoding: NSUTF8StringEncoding) as! String
-
-        if let doc = Kanna.HTML(html: dataStr, encoding: NSUTF8StringEncoding) {
-            for scheduleContainerHTML in doc.xpath("//div[@id='parrilla_registro']") {
-                let movie = createMovieFromHtmlElement(scheduleContainerHTML)
-                scheduleMovies.append(movie)
+        do {
+            let htmlStr = try NSString(contentsOfURL: url, encoding: NSUTF8StringEncoding)
+            
+            if let doc = Kanna.HTML(html: htmlStr as String, encoding: NSUTF8StringEncoding) {
+                for scheduleContainerHTML in doc.xpath("//div[@id='parrilla_registro']") {
+                    let movie = createMovieFromHtmlElement(scheduleContainerHTML)
+                    scheduleMovies.append(movie)
+                }
             }
-        }
-        
-        for(index, movie) in enumerate(scheduleMovies) {
-            if index == scheduleMovies.count - 1 {
-                movie.endTime = movie.startTime?.dateByAddingTimeInterval(2*60)
-            } else {
-                movie.endTime = scheduleMovies[index + 1].endTime
+            
+            for(index, movie) in scheduleMovies.enumerate() {
+                if index == scheduleMovies.count - 1 {
+                    movie.endTime = movie.startTime?.dateByAddingTimeInterval(2*60)
+                } else {
+                    movie.endTime = scheduleMovies[index + 1].endTime
+                }
+                movie.endTime = movie.startTime!.dateByAddingTimeInterval(2*60*60)
             }
-            movie.endTime = movie.startTime!.dateByAddingTimeInterval(2*60*60)
+        } catch {
+            return []
         }
         
         return scheduleMovies
@@ -56,8 +59,8 @@ class ScheduleOfDayFetcher {
         let imageUrl = element.css("img")[0]["src"]!
         let bulkGenre = element.css("#lengua-roja_").toHTML
         let genre = processGenreType(bulkGenre!)
-        var startTimeStr = element.css("#lengua-roja_").text!
-        var url = element.css("a")[0]["href"]!
+        let startTimeStr = element.css("#lengua-roja_").text!
+        let url = element.css("a")[0]["href"]!
         
         let movie = ScheduledMovie(
             originalName: originalName,
@@ -67,28 +70,30 @@ class ScheduleOfDayFetcher {
             genre: genre,
             url: url
         )
-        var startDateTime = NSDate.dateFromString("\(dateStr) \(startTimeStr)", format: "yyyy-MM-dd HH:mm")
+        let startDateTime = NSDate.dateFromString("\(dateStr) \(startTimeStr)", format: "yyyy-MM-dd HH:mm")
         movie.startTime = startDateTime
         
         return movie
     }
     
     private func processOriginalName(var element: String) -> String {
-        var index = element.rangeOfString("Título Original: ", options: .LiteralSearch, range: nil, locale: nil)
+        let index = element.rangeOfString("Título Original: ", options: .LiteralSearch, range: nil, locale: nil)
         element = element.substringFromIndex(index!.endIndex)
-        return element.stringByReplacingOccurrencesOfString("-->\n</div>", withString: "", options: nil, range: nil)
+        return element.stringByReplacingOccurrencesOfString("-->\n</div>", withString: "")
     }
     
     private func processGenreType(var element: String) -> String {
-        element = element.stringByReplacingOccurrencesOfString("<div class=\"textoblanco12n\" id=\"lengua-roja_\">", withString: "", options: nil, range: nil).stringByReplacingOccurrencesOfString("<!-- -", withString: "", options: nil, range: nil).stringByReplacingOccurrencesOfString("-->\n</div>", withString: "", options: nil, range: nil)
+        element = element.stringByReplacingOccurrencesOfString("<div class=\"textoblanco12n\" id=\"lengua-roja_\">", withString: "")
+                         .stringByReplacingOccurrencesOfString("<!-- -", withString: "")
+                         .stringByReplacingOccurrencesOfString("-->\n</div>", withString: "")
         
-        let index = advance(element.startIndex, 6)
+        let index = element.startIndex.advancedBy(6)
         return element.substringFromIndex(index)
     }
 }
 
 func p<T>(t: T) {
-    println(t)
+    print(t)
 }
 
 extension NSDate {

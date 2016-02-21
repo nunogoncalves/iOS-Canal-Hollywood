@@ -10,20 +10,21 @@ import UIKit
 
 class CharlieChaplinGifView : UIWebView {
     
-    init(frame: CGRect) {
+    override init(frame: CGRect) {
         super.init(frame: frame)
         configure()
     }
     
-    init?(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         configure()
     }
     
     private func configure() {
         let filePath = NSBundle.mainBundle().pathForResource("waiting", ofType: "gif")!
-        let gif = NSData(contentsOfFile: filePath)
-        loadData(gif, MIMEType: "image/gif", textEncodingName: nil, baseURL: nil)
+        let gifData = NSData(contentsOfFile: filePath)
+        loadData(gifData!, MIMEType: "image/gif", textEncodingName: "", baseURL: NSURL())
+//        loadData(gif!, MIMEType: "image/gif", textEncodingName: nil, baseURL: nil)
         contentMode = UIViewContentMode.Center
         scalesPageToFit = true
     }

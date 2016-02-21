@@ -27,7 +27,7 @@ class ScheduleDataSource : NSObject, UITableViewDataSource, UITableViewDelegate 
     var schedule: [ScheduledMovie] = []
     
     func load(date: NSDate, finishedCallback: ()->() = {}) {
-        dispatch_async(dispatch_get_global_queue(Int(QOS_CLASS_USER_INITIATED.value), 0)) {
+        dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0)) {
             self.schedule = ScheduleOfDayFetcher(date: date).fetch()
             dispatch_async(dispatch_get_main_queue()) {
                 self.schedulesTable.reloadData()

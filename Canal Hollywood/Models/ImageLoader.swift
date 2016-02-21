@@ -10,7 +10,7 @@ import UIKit
 
 class ImageLoader {
     static func loadImageIn(imageView: UIImageView, url: String) {
-        dispatch_async(dispatch_get_global_queue(Int(QOS_CLASS_USER_INITIATED.value), 0)) {
+        dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0)) {
             let data = NSData(contentsOfURL: NSURL(string: url)!)
             dispatch_async(dispatch_get_main_queue()) {
                 imageView.image = UIImage(data: data!)

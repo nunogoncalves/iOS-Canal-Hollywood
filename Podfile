@@ -3,7 +3,7 @@
 
 target 'Canal Hollywood' do
   use_frameworks!
-  pod 'Kanna'
+  pod 'Kanna', '~> 1.0.0'
 end
 
 target 'Canal HollywoodTests' do

@@ -10,7 +10,7 @@ import UIKit
 
 class TableCellAnimator: NSObject, UIViewControllerAnimatedTransitioning {
     
-    func transitionDuration(transitionContext: UIViewControllerContextTransitioning) -> NSTimeInterval {
+    func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
         return 1.0
     }
     
@@ -22,16 +22,16 @@ class TableCellAnimator: NSObject, UIViewControllerAnimatedTransitioning {
         //        //make a snapshot of the selected cell
         let cellView = fromVC.lastSelectedCell
         
-        transitionContext.containerView().insertSubview(toVC.view, belowSubview: cellView!)
+        transitionContext.containerView()!.insertSubview(toVC.view, belowSubview: cellView!)
 
         let smallMovieImageView = fromVC
         
-        transitionContext.containerView().addSubview(cellView!)
+        transitionContext.containerView()!.addSubview(cellView!)
 
         let width = fromVC.view.bounds.size.width
         toVC.view.transform = CGAffineTransformMakeTranslation(width, 0.0)
 
-        (UIApplication.sharedApplication().windows.first as! UIWindow).backgroundColor = UIColor.whiteColor()
+        (UIApplication.sharedApplication().windows.first! as UIWindow).backgroundColor = UIColor.whiteColor()
 
         let duration = transitionDuration(transitionContext)
         
@@ -49,7 +49,7 @@ class TableCellAnimator: NSObject, UIViewControllerAnimatedTransitioning {
     
         UIView.animateWithDuration(duration/4,
             delay: duration/4,
-            options: nil,
+            options: [],
             animations: {
                 cellView!.center.y = cellView!.bounds.size.height/2 + fromVC.topLayoutGuide.length
             }, completion: { _ in
@@ -57,7 +57,7 @@ class TableCellAnimator: NSObject, UIViewControllerAnimatedTransitioning {
         
         UIView.animateWithDuration(duration/4,
             delay: 2 * duration/4,
-            options: nil,
+            options: [],
             animations: {
                 cellView!.movieImageView.transform = CGAffineTransformMakeScale(2.0, 2.0)
             }, completion: { _ in
@@ -65,7 +65,7 @@ class TableCellAnimator: NSObject, UIViewControllerAnimatedTransitioning {
         
         UIView.animateWithDuration(duration/4,
             delay: 2 * duration/4,
-            options: nil,
+            options: [],
             animations: {
 //                toVC.view.transform = CGAffineTransformIdentity
             }, completion: { _ in

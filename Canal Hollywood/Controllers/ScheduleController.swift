@@ -39,7 +39,7 @@ class ScheduleController: UIViewController, DateDelegate {
         
 //        navigationController?.delegate = self
        
-        let button = UIButton.buttonWithType(.Custom) as! UIButton
+        let button = UIButton(type: .Custom)
         button.setImage(UIImage(named: "calendar.png"), forState: .Normal)
         button.addTarget(self, action: "selectDay", forControlEvents: .TouchUpInside)
         button.frame = CGRectMake(0, 0, 30, 30)
@@ -47,12 +47,13 @@ class ScheduleController: UIViewController, DateDelegate {
         
         navigationItem.rightBarButtonItem = barButton
         
-//        let filePath = NSBundle.mainBundle().pathForResource("waiting", ofType: "gif")!
-//        let gif = NSData(contentsOfFile: filePath)
+        let filePath = NSBundle.mainBundle().pathForResource("waiting", ofType: "gif")!
+        let gif = NSData(contentsOfFile: filePath)
+        gifWebView.loadData(gif!, MIMEType: "image/gif", textEncodingName: "", baseURL: NSURL())
 //        gifWebView.loadData(gif, MIMEType: "image/gif", textEncodingName: nil, baseURL: nil)
-//        gifWebView.contentMode = UIViewContentMode.Center
-//        gifWebView.scalesPageToFit = true
-//        gifWebView.contentMode = UIViewContentMode.Center
+        gifWebView.contentMode = UIViewContentMode.Center
+        gifWebView.scalesPageToFit = true
+        gifWebView.contentMode = UIViewContentMode.Center
     
         scheduleTable.hidden = true
         gifWebView.hidden = false
@@ -93,7 +94,7 @@ class ScheduleController: UIViewController, DateDelegate {
 
         if date != selectedDate {
             selectedDate = date
-            navigationItem.title = date.stringFromDateInFormat(format: "EEE, dd 'de' MMM 'de' YYYY")
+            navigationItem.title = date.stringFromDateInFormat("EEE, dd 'de' MMM 'de' YYYY")
             scheduleTable.hidden = true
             gifWebView.hidden = false
             dataSource.load(date) {
