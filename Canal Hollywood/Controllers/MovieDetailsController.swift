@@ -14,6 +14,15 @@ class MovieDetailsController: UIViewController {
     @IBOutlet weak var originalNameLabel: UILabel!
     @IBOutlet weak var localNameLabel: UILabel!
     @IBOutlet weak var movieSummary: UILabel!
+    @IBAction func imdbClicked() {
+        
+        let application = UIApplication.sharedApplication()
+        if let url = NSURL(string: "imdb:///find?q=godfather") where application.canOpenURL(url){
+            application.openURL(url)
+        } else {
+            application.openURL(NSURL(string: "http://www.imdb.com")!)
+        }
+    }
     
     var movie: ScheduledMovie?
     
@@ -22,11 +31,11 @@ class MovieDetailsController: UIViewController {
      
         
         if let movie = movie {
-            let url = movie.imageUrl.stringByReplacingOccurrencesOfString("/th/", withString: "/", options: nil, range: nil)
+            let url = movie.imageUrl.stringByReplacingOccurrencesOfString("/th/", withString: "/")
             ImageLoader.loadImageIn(imageView, url: url)
             originalNameLabel.text = movie.originalName
             localNameLabel.text = movie.localName
-            FetchMovieDetails(movie: movie)
+            let _ = FetchMovieDetails(movie: movie)
             movieSummary.text = movie.summary
         }
     }
